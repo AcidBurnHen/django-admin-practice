@@ -1,3 +1,9 @@
 from django.contrib import admin
+from . import models 
 
-# Register your models here.
+class BookStoreAdminArea(admin.AdminSite):
+    site_header = 'Bookstore Admin Area'
+
+book_site = BookStoreAdminArea(name='BookstoreAdmin')
+
+# blog_site.register(models.Post)
